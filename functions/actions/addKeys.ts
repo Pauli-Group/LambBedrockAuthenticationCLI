@@ -3,6 +3,7 @@ import KeyTrackerB from 'lambbedrockauthentication/lib/KeyTrackerB';
 import LambBedrockAuthentication from 'lambbedrockauthentication/lib/LambBedrockAuthentication';
 import factoryOptions from '../../constants/factoryOptions';
 import "dotenv/config"
+import say from '../say';
 
 const addKeys = async (numberOfKeys: number) => {
     try {
@@ -26,7 +27,7 @@ const addKeys = async (numberOfKeys: number) => {
         keyTracker.keys = selectedAccount.baseKeyTracker.keys;
 
         // Add keys to the account
-        const [gasUsed, keyCount, chainId, success, errorMessage] = await lba.addKeys(
+        const [gasUsed, keyCount, remainingOnContract, sanityCheck, txHash] = await lba.addKeys(
             selectedAccount.address,
             keyTracker,
             numberOfKeys,
@@ -37,8 +38,11 @@ const addKeys = async (numberOfKeys: number) => {
         await fs.writeFile(selectedAccountFile, JSON.stringify(selectedAccount, null, 2));
 
         console.log(`${numberOfKeys} keys added to the account '${selectedAccount.nickname}'.`);
-        console.log(`Gas used: ${gasUsed}`);
-        console.log(`Total keys in the account: ${keyCount}`);
+        // console.log(`Gas used: ${gasUsed}`);
+        say('Gas', gasUsed.toString());
+        // console.log(`Total keys in the account: ${keyCount}`);
+        say('Keys', keyCount.toString());
+        say('Tx', `${factoryOptions[selectedAccount.blockchain].baseExplorer}tx/${txHash}`);
 
     } catch (error: any) {
         console.log(`Failed to add keys to the account: ${error.message}`);

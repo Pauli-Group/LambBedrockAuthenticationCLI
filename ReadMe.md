@@ -59,10 +59,5 @@ Account creation is free aside from transaction fees. Pauli Group takes a fee up
 ### Check For And Remove Bad Keys
 - Make sure every pkh listend in KeyTrackerB.expendedKeys is marked as `redeemed` on the contract
 
-### Link To The Tx On The Chain Explorer When...
-- Creating an account
-- Adding keys
-- Signing a message
-
 ### Locally Save Signed Messages
 - Include the message and the transaction hash 
