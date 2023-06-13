@@ -35,6 +35,7 @@ Build The Project:
 
 ## Verify Message
  - `node lib/Main.js verify-message <message> <address> <blockchain>`
+ - Messages can also be verified using the web interface at https://app.anchorwallet.ca/verify
 
 ## Notice On Tokens
 Don't sent tokens to your LambBedrock account. The account is not a wallet and you will not be able to recover funds sent to it.
