@@ -55,7 +55,8 @@ const createAccount = async (blockchain: string, numberOfKeys: number, nickname:
             'Nickname': nickname,
             'Account details saved in file': filename,
             'Transaction hash': transactionHash,
-            'Deployment cost': `${ethers.utils.formatEther(cost)} ETH`
+            'Deployment cost': `${ethers.utils.formatEther(cost)} ETH`,
+            'View On Explorer': `${factoryOptions[blockchain].baseExplorer}tx/${transactionHash}`,
         });
 
         // Select this account as the current account
