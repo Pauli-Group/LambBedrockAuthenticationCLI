@@ -1,19 +1,21 @@
-## Introduction
+## Lamb Authenticator
 
-Throughout the history of the internet users have been able to more or less assume that what they read or at least watch online is in some sense ‘real’. With the advent of AI this is quickly becoming a fact of the past. Simultaneously, advances in quantum computing are forcing us to deeply examine the cryptographic assumptions we build upon. Tools like RSA will break soon, and their replacements do not have the confidence that comes only with decades of use. 
+Generative AI is challenging the way identity can be authenticated on the internet. Simultaneously, advances in quantum computing are forcing us to deeply examine the cryptographic assumptions we build upon since RSA and ECC are not long term solutions anymore.
 
-Our solution is a bedrock for identity. One where identity is owned by the identified. We have combined blockchain and lamport keys to build a tool that acts both as an authentication protocol and as public key infrastructure. 
+Our solution is meant as a bedrock for identity. It is built with established quantum secure crypto to be future proof to the technological advances of this century. We have combined blockchain and Lamport keys to build a tool that acts both as an authentication protocol and as public key infrastructure.
 
-Users register an account by interacting with a factory contract and submitting their initial lamport key hashes. This process creates a new contract users will interact with and use to identify themselves. The address of this contract will be needed by anyone who wants to verify the user's messages. Users can add more keys to their account at any time by submitting a list of new keys signed with one of their existing keys. 
+Users register an account by interacting with a factory contract and submitting their initial Lamport key hashes. This process creates a new contract users will interact with and use to identify themselves. The address of this contract will be needed by anyone who wants to verify the user's messages. Users can add more keys to their account at any time by submitting a list of new keys signed with one of their existing keys.
 
-An ECDSA account is required only to submit transactions and pay fees. 
+An ECDSA account is required only to submit transactions and pay fees.
+
+## Lamb Whitepaper
+https://anchorwallet.ca/whitepaper/
 
 ## Contact Us
 
 https://discord.com/invite/JAEC8pgWFV
 
 https://twitter.com/pauli_group
-
 
 ## Setup
 Create a .env file in the root of this directory. Add the following:
