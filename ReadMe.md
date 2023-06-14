@@ -81,3 +81,7 @@ Account creation is free aside from transaction fees. Pauli Group takes a fee up
 
 ### Locally Save Signed Messages
 - Include the message and the transaction hash 
+
+### Backup Keys
+- Allow the user to create a set of backup keys which are kept separate from the main set of keys on another device
+- We may want to encrypt these backup keys just to avoid stupid mistakes
